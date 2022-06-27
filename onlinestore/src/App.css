@@ -1,38 +1,142 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  width: 100%;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background: hsl(206, 100%, 99%);
+  min-height: 10vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  padding: 0 10px;
+  justify-content: space-between;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #39a9ff;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.App-header p {
+  color: #39a9ff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.Filtering {
+  text-align: center;
+}
+
+.Filtering .search {
+  display: flex;
+  justify-content: center;
+}
+
+.Filtering .search #search {
+  padding: 10px 5px;
+  width: 70%;
+  outline: 1px solid #39a9ff;
+  border: none;
+}
+
+.Filtering .search #submit {
+  width: 15%;
+  border: none;
+  outline: 1px solid #39a9ff;
+  background: hsla(205, 58%, 89%, 0.243);
+}
+
+button {
+  border: none;
+  padding: 5px 10px;
+  margin: 10px 5px;
+  background: hsla(205, 58%, 89%, 0.243);
+  text-transform: capitalize;
+}
+
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.itemCard {
+  width: 40%;
+  background-color: #ffffff;
+  color: rgb(112, 112, 112);
+  text-align: center;
+  margin: 10px auto;
+  position: relative;
+  border: 1px solid #eaebef;
+}
+
+.itemCard .ImgCard {
+  width: 100%;
+  height: 200px;
+  padding-top: 10px;
+}
+
+.itemCard .ImgCard img {
+  width: 100%;
+  object-fit: scale-down;
+  height: 100%;
+}
+
+.itemCard p {
+  font-size: 0.7em;
+  padding: 5px 10px 0 10px;
+  margin: 0;
+  text-align: left;
+}
+
+.itemCard .name {
+  font-weight: 600;
+  font-size: 0.7em;
+}
+
+.itemCard .price {
+  font-size: 1.0em;
+  font-weight: 600;
+  padding-top: 0;
+}
+
+.itemCard span {
+  text-transform: capitalize;
+  padding: 5px;
+  background: #d1e4f3;
+  position: absolute;
+  top: 0;
+  font-size: 0.7em;
+  left: 0;
+  z-index: 99;
+  color: rgb(82, 82, 82);
+}
+
+.itemCard button {
+  width: 90%;
+}
+
+@media (min-width:600px) {
+  .itemCard {
+    width: 30%;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (min-width:700px) {
+  .itemCard {
+    width: 25%;
+  }
+}
+
+@media (min-width:800px) {
+  .itemCard {
+    width: 20%;
+  }
+}
+
+@media (min-width:900px) {
+  .itemCard {
+    width: 20%;
+  }
+}
+
+@media (min-width:1000px) {
+  .itemCard {
+    width: 15%;
   }
 }
