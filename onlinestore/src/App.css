@@ -4,19 +4,65 @@
 
 .App-header {
   background: hsl(206, 100%, 99%);
-  min-height: 10vh;
+  min-height: 30px;
   display: flex;
   padding: 0 10px;
   justify-content: space-between;
   font-size: calc(10px + 2vmin);
   color: #39a9ff;
   align-items: center;
-  margin-bottom: 20px;
 }
 
 .App-header p {
   color: #39a9ff;
 }
+
+.App-header .Icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background: aliceblue;
+}
+
+section .container {
+  width: 70%;
+  margin: auto;
+  color: rgb(78, 78, 78);
+}
+
+section .container {
+  width: 100%;
+}
+
+section .container h1 {
+  font-size: 2.0em;
+}
+
+section .container p {
+  font-size: 1.2em;
+}
+
+section button {
+  background: rgb(255, 153, 0);
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+section .container2 {
+  width: 100%;
+}
+
+section .container2 img {
+  width: 80%;
+}
+
 
 .Filtering {
   text-align: center;
@@ -38,15 +84,41 @@
   width: 15%;
   border: none;
   outline: 1px solid #39a9ff;
-  background: hsla(205, 58%, 89%, 0.243);
+}
+
+.Filtering p {
+  font-size: 1.2em;
+  color: rgb(255, 153, 0);
+  font-weight: 500;
+}
+
+.category {
+  background: #39a9ff;
+  display: flex;
+  justify-content: center;
+  margin: 0 0 20px 0;
+  overflow: scroll hidden;
+
+}
+
+.category::-webkit-scrollbar {
+  overflow-y: hidden;
+}
+
+.category button {
+  padding: 10px 10px;
+}
+
+.category button:hover {
+  background: rgb(255, 153, 0);
 }
 
 button {
   border: none;
+  color: white;
   padding: 5px 10px;
-  margin: 10px 5px;
-  background: hsla(205, 58%, 89%, 0.243);
   text-transform: capitalize;
+  background: transparent;
 }
 
 .items {
@@ -103,12 +175,16 @@ button {
   top: 0;
   font-size: 0.7em;
   left: 0;
+  overflow: hidden;
   z-index: 99;
   color: rgb(82, 82, 82);
 }
 
 .itemCard button {
   width: 90%;
+  color: rgb(255, 255, 255);
+  background: #67bdff;
+  margin: 10px 0;
 }
 
 @media (min-width:600px) {
@@ -121,6 +197,8 @@ button {
   .itemCard {
     width: 25%;
   }
+
+
 }
 
 @media (min-width:800px) {
@@ -132,6 +210,35 @@ button {
 @media (min-width:900px) {
   .itemCard {
     width: 20%;
+  }
+
+  section {
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  section .container {
+    text-align: left;
+    width: 40%;
+    padding: 0 0 0 50px;
+  }
+
+  section .container2 {
+    width: 50%;
+  }
+
+  section .container p {
+    font-size: 1.5em;
+  }
+
+  section .container h1 {
+    font-size: 2.5em;
+  }
+
+  section .container2 img {
+    width: 60%;
+    padding: 10px;
   }
 }
 
