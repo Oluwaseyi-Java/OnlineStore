@@ -1,20 +1,17 @@
-.App {
-  width: 100%;
-}
-
 .App-header {
-  background: hsl(206, 100%, 99%);
   min-height: 30px;
+  background: #ffffff;
   display: flex;
   padding: 0 10px;
   justify-content: space-between;
   font-size: calc(10px + 2vmin);
-  color: #39a9ff;
+  color: #ff0000;
   align-items: center;
+  border-bottom: 1px solid #ffc4c4;
 }
 
 .App-header p {
-  color: #39a9ff;
+  font-weight: 600;
 }
 
 .App-header .Icons {
@@ -23,12 +20,88 @@
   gap: 10px;
 }
 
+.Category ul {
+  display: none;
+}
+
+/* 
+.Category ul li {
+  padding: 15px 0;
+  border-bottom: 1px solid white;
+}
+
+.Category ul li a {
+  text-decoration: none;
+  color: white;
+  text-transform: capitalize;
+}
+
+ .bars:active {
+  color: #ff6f67;
+}
+
+.Category:hover ul{
+  display: block;
+} */
+.viewSection {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 10%;
+
+}
+
+.viewSection .img {
+  width: 80%;
+  margin: auto;
+
+}
+
+.viewSection .img img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.viewSection .viewCa {
+  text-align: left;
+}
+
+.viewSection .viewCa p {
+  line-height: 30px;
+  word-spacing: 3px;
+}
+
+.viewSection .viewCa .viewName {
+  font-size: 1.2em;
+  word-spacing: 0;
+}
+
+.viewSection .viewCa .viewPrice {
+  font-size: 1.7em;
+  font-weight: 600;
+  padding: 0;
+  margin: 0;
+}
+
+.viewSection .viewCa button {
+  border-radius: 5px;
+}
+
+.sectionView .back {
+  width: 60%;
+  margin: auto;
+}
+
+.sectionView {
+  padding: 50px 0;
+}
+
 section {
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  background: aliceblue;
+  background: #ffffff;
+  width: 100%;
 }
 
 section .container {
@@ -50,9 +123,8 @@ section .container p {
 }
 
 section button {
-  background: rgb(255, 153, 0);
+  background: #ff3939;
   padding: 10px 15px;
-  border-radius: 5px;
 }
 
 section .container2 {
@@ -66,6 +138,8 @@ section .container2 img {
 
 .Filtering {
   text-align: center;
+  background: #ffffff;
+  padding: 20px 0;
 }
 
 .Filtering .search {
@@ -82,6 +156,8 @@ section .container2 img {
 
 .Filtering .search #submit {
   width: 15%;
+  color: white;
+  background: #39a9ff;
   border: none;
   outline: 1px solid #39a9ff;
 }
@@ -90,27 +166,6 @@ section .container2 img {
   font-size: 1.2em;
   color: rgb(255, 153, 0);
   font-weight: 500;
-}
-
-.category {
-  background: #39a9ff;
-  display: flex;
-  justify-content: center;
-  margin: 0 0 20px 0;
-  overflow: scroll hidden;
-
-}
-
-.category::-webkit-scrollbar {
-  overflow-y: hidden;
-}
-
-.category button {
-  padding: 10px 10px;
-}
-
-.category button:hover {
-  background: rgb(255, 153, 0);
 }
 
 button {
@@ -170,7 +225,7 @@ button {
 .itemCard span {
   text-transform: capitalize;
   padding: 5px;
-  background: #d1e4f3;
+  background: #f3d1d1;
   position: absolute;
   top: 0;
   font-size: 0.7em;
@@ -183,8 +238,19 @@ button {
 .itemCard button {
   width: 90%;
   color: rgb(255, 255, 255);
-  background: #67bdff;
+  background: #ff6f67;
   margin: 10px 0;
+}
+
+.footer {
+  background-color: #ffffff;
+  color: #8d8d8d;
+}
+
+.socials {
+  text-align: center;
+  margin: 30px 0 0 0;
+  padding: 10px;
 }
 
 @media (min-width:600px) {
@@ -197,8 +263,6 @@ button {
   .itemCard {
     width: 25%;
   }
-
-
 }
 
 @media (min-width:800px) {
@@ -208,42 +272,109 @@ button {
 }
 
 @media (min-width:900px) {
-  .itemCard {
-    width: 20%;
+  .Icons .bars {
+    display: none;
   }
 
+  .Category {
+    width: 90%;
+  }
+
+  .Category ul {
+    list-style-type: none;
+    display: inline-flex;
+    position: inherit;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    background: transparent;
+  }
+
+  .Category ul li {
+    font-size: 0.6em;
+    padding: 5px;
+    text-transform: capitalize;
+    transition: ease 0.8s;
+  }
+
+  .Category ul li a {
+    padding: 15px;
+    color: #989898;
+    text-decoration: none;
+  }
+
+  .Category ul li:hover {
+    background: #ffdddda0;
+  }
+
+  .items {
+    padding: 0 15%;
+  }
+
+  .App-header {
+    padding: 0 15%;
+  }
+
+  .itemCard {
+    width: 30%;
+  }
+
+  .viewSection {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+.sectionView{
+  display: block;
+}
+.sectionView .back{
+  width: 10%;
+}
   section {
     flex-direction: row;
-    justify-content: space-around;
-    width: 100%;
+    justify-content: space-between;
+    padding: 50px 0;
+    max-height: 300px;
   }
 
   section .container {
     text-align: left;
-    width: 40%;
-    padding: 0 0 0 50px;
+    width: 50%;
+    padding: 0 0 0 15%;
+    height: 100%;
   }
 
   section .container2 {
     width: 50%;
+    padding: 0 15% 0 0;
+    text-align: right;
+    height: 100%;
+  }
+
+  section .container2 img {
+    object-fit: contain;
+    height: 250px;
   }
 
   section .container p {
-    font-size: 1.5em;
+    font-size: 1.1em;
   }
 
   section .container h1 {
     font-size: 2.5em;
   }
-
-  section .container2 img {
-    width: 60%;
-    padding: 10px;
-  }
 }
 
 @media (min-width:1000px) {
   .itemCard {
-    width: 15%;
+    width: 20%;
+  }
+}
+
+
+
+@media (min-width:750px) {
+
+  .socials {
+    font-size: 1em;
   }
 }
